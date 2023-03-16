@@ -11,22 +11,28 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Code Quiz</title>
   </head>
-  <body>
-    <header>
-      <h5 id="high-scores"><a href="highscores.html">View High Scores</a></h3>
-      <h5>Time Left: <span id = "counter">placeholder</span></h3>
-    </header>
-
-    <container id="start-box" data-state="active">
-      <h1>Coding Quiz Challenge</h1>
-      <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your time by five seconds!</p>
-      <button id="start-button">Start Quiz</button>
+  <main>
+    <container id="score-stuff">
+        <div id="high-score-box">
+            <h1>High Scores</h1>
+            <ul id="saved-scores">
+                <li>placeholder</li>
+                <li>placeholder</li>
+            </ul>
+                <div >
+                <input type="text" placeholder="Your Name">
+                <button id="high-score-btn">Add Score</button>
+            </div>
+            <div id="score-controls">
+                <button>Clear Scores</button>
+                <button>Play Again</button>
+            </div>
+        </div>
+        
     </container>
+   
 
-    <container class="quiz-box" data-state="inactive">
-    </container>  
-  
-  
+  </main>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
