@@ -53,6 +53,13 @@ button {
     border: none;
 }
 
+button:hover{
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px var(--royal-purple);
+}
+
+/* -- Starting here content is for high-scores page */
+
 #score-stuff{
     display: flex;
     justify-content: center;
@@ -79,26 +86,42 @@ li {
     margin: 16px 0px;
 }
 
-
-
-#high-score-btn {
-    background-color: var(--mint);
-    border: solid 1px var(--royal-purple);
-    color: var(--royal-purple)
+hr {
+    color: var(--royal-purple);
+    border: 1px solid
 }
-
 
 input {
     height: 52px;
     width: 56%;
-    margin-right: 16px;
     border-radius: 12px;
     border: solid 1px var(--royal-purple);
     font-size: 24px;
     padding-left: 24px;
 }
+input:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 1px 1px var(--royal-purple);
+}
+
+input:focus{
+    outline: none;
+    box-shadow: 1px 1px 1px 1px var(--royal-purple);
+}
+
+.secondary-btn {
+    background-color: white;
+    border: solid 1px var(--royal-purple);
+    color: var(--royal-purple);
+    padding-left: 12px;
+    padding-right: 12px;
+}
 
 #score-controls {
     flex-direction: row;
     margin-top: 200px;
+}
+
+#score-controls button {
+    margin-right: 16px;
 }
