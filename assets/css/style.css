@@ -8,13 +8,7 @@
     --mint: #EBF5EE;
 }
 
-[data-state="inactive"] {
-    visibility: hidden;
-}
 
-[data-value="active"] {
-    visibility: visible;
-}
 
 body {
     background-color: var(--mint);
@@ -50,6 +44,7 @@ p {
     margin: auto;
     align-items: center;
 }
+
 
 button {
     background-color: var(--royal-purple);
@@ -88,7 +83,7 @@ button:hover{
 #high-score-box {
     display: flex;
     flex-direction: column;
-    margin-top: 216px;
+    
 }
 
 #high-score-box h1 {
@@ -144,4 +139,26 @@ input:focus{
 
 #score-controls button {
     margin-right: 16px;
+}
+
+#start-box[data-state="inactive"] {
+    display:none;
+}
+
+#quiz-box[data-state="active"] {
+    display: flex;
+}
+#quiz-box[data-state="inactive"] {
+    display:none;
+}
+
+#score-stuff[data-state="active"] {
+    display: flex;
+}
+#score-stuff[data-state="inactive"] {
+    display:none;
+}
+
+#start-box[data-state="active"] {
+    display: flex;
 }

@@ -8,6 +8,7 @@ var savedScoresEl = document.getElementById('saved-scores');
 var addInitialsEl = document.getElementById('initials');
 var playAgainEl = document.getElementById('play-again');
 var clearScores = document.getElementById('clear-scores')
+var scoreBoxEl = document.getElementById('score-stuff')
 
 var score = 0;
 var timeLeft = 40;
@@ -25,14 +26,16 @@ var questions = [
 const choices = 1;
 const question = 0;
 const answer = 2;
-var questionIndex = 0
+var questionIndex = 0;
 
 function init() {
-    score === 0;
-    timeLeft === 40;
+    questionIndex === 0;
+    // score === 0;
+    // timeLeft === 40;
     //set timer
+    reset();
     quizBoxEl.setAttribute("data-state", "active");
-    startBoxEl.remove();
+    startBoxEl.setAttribute("data-state", "inactive");
     populateQuestion();
 }
 
@@ -72,10 +75,11 @@ quizBoxEl.addEventListener("click", function(event){
             quizBoxEl.append(isCorrect);
         }
     }
-    console.log(questionIndex);
+    console.log("question index: " +questionIndex);
     if (questionIndex === questions.length-1) {
-        questionIndex = 0;
-        window.location.href = './highscores.html';
+        quizBoxEl.setAttribute("data-state", "inactive");
+        scoreBoxEl.setAttribute("data-state", "active");
+        quizBoxEl.innerHTML = "";
     } else {
         questionIndex++;
         quizBoxEl.innerHTML = "";
@@ -83,6 +87,22 @@ quizBoxEl.addEventListener("click", function(event){
     }
 });
 
+//reset game
+
+function reset() {
+    questionIndex = 0;
+    score = 0
+    timeLeft = 40;
+}
+
+playAgainEl.addEventListener("click", function(){
+    questionIndex = 0;
+    quizBoxEl.innerHTML = "";
+    startBoxEl.setAttribute("data-state", "active");
+    scoreBoxEl.setAttribute("data-state", "inactive");
+    console.log("question index: " + questionIndex);
+    return;
+})
 
 
 
