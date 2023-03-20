@@ -14,7 +14,7 @@
   <body>
     <header>
       <h5 id="high-scores"><a href="highscores.html">View High Scores</a></h3>
-      <h5>Time Left: <span id = "counter">placeholder</span></h3>
+      <h5>Time Left: <span id = "counter"></span>s</h3>
     </header>
 
     <container id="start-box" data-state="active">
@@ -27,6 +27,27 @@
       <!-- <h2 id="question"></h2> -->
       <!-- <button data-state="correct"></button> -->
     </container>  
+
+    <container id="score-stuff">
+      <div id="high-score-box">
+          <h1>High Scores</h1>
+          <ul id="saved-scores">
+              <li>placeholder</li>
+              <li>placeholder</li>
+          </ul>
+              <div id="initials-field">
+              <input id="initials" type="text" placeholder="Your Name">
+              <button class="secondary-btn">Add Score</button>
+          </div>
+          
+          <div id="score-controls">
+              
+              <button id="play-again">Play Again</button>
+              <button id="clear-scores" class="secondary-btn">Clear Scores</button>
+          </div>
+      </div>
+      
+  </container>
   
   
     <script src="./assets/js/script.js"></script>

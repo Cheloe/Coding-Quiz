@@ -8,6 +8,14 @@
     --mint: #EBF5EE;
 }
 
+[data-state="inactive"] {
+    visibility: hidden;
+}
+
+[data-value="active"] {
+    visibility: visible;
+}
+
 body {
     background-color: var(--mint);
 }
@@ -58,6 +66,18 @@ button:hover{
     box-shadow: 1px 1px 1px 1px var(--royal-purple);
 }
 
+#quiz-box {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+    /* align-items: center; */
+}
+
+#quiz-box button {
+    margin: 8px;
+    width: 60%;
+}
 /* -- Starting here content is for high-scores page */
 
 #score-stuff{
