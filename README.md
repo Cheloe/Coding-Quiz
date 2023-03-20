@@ -17,6 +17,7 @@
 4. Append scores/initials logic to score page
 5. Media queries
 6. Figure out why the stupid quizBox container thinks it's a button
+7. Change that awful background color
 
 ## Screenshots: 
 
