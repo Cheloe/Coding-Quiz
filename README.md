@@ -27,6 +27,6 @@
 
 ## Deployed site: 
 
-<a href="https://cheloe.github.io/Coding-Quiz">Code Quiz</a>
+<a href="github.io/cheloe/Coding-Quiz">Code Quiz</a>
 
 
